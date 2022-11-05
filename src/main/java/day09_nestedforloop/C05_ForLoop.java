@@ -21,7 +21,7 @@ public class C05_ForLoop {
             System.out.println(str.charAt(i));
         }
 
-     //2/ yol
+
 
 
 

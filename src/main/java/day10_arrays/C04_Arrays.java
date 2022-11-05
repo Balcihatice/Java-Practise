@@ -21,8 +21,11 @@ public class C04_Arrays {
         public static void main (String[]args){
             Scanner input = new Scanner(System.in);
             System.out.println("Lutfen bir cumle giriniz");
+
             String cumle = input.nextLine().toLowerCase();//java ile guzel dunya
+
             String arr[] = new String[cumle.length()];
+
             for (int i = 0; i < cumle.length(); i++) {
                 arr[i] = cumle.substring(i, i + 1);
                 System.out.print(arr[i]);//"Verilen cumlenin Array'e donusmus hali
