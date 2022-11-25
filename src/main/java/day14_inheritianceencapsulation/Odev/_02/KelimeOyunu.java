@@ -3,42 +3,22 @@ package day14_inheritianceencapsulation.Odev._02;
 import java.util.Scanner;
 
 public class KelimeOyunu {
+
     static int oyuncu = 1;
     static int puan1 = 0;
     static int puan2 = 0;
     static String kelime = "";
     static String ekleme = "";
-
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
+
 
         System.out.println(oyuncu + ".oyuncu bir kelime giriniz");
         kelime = input.next();//oyuncunu verdigi kelimeyi class levelda hiclik olarak atamistik
 
         oyuncuDegistir();//oyuncu degistirme methodu
         onaySor();
-    }
-
-    public static void oyuncuDegistir() {
-        if (oyuncu == 1) {//havva
-            oyuncu = 2;//goksel bey
-        } else
-            oyuncu = 1;
-    }
-
-    private static void kelimeEkle() {
-        System.out.println("Eski kelimeye eklenecek str giriniz");
-        ekleme = input.next();
-        System.out.println("Yeni str'i basa mi sona mi ekliyelim ?\n 1: basa ekle 0: sona ekle");
-
-        int tercih = input.nextInt();
-        if (tercih == 1) {
-            kelime = ekleme + kelime;
-        } else kelime = kelime + ekleme;
-        oyuncuDegistir();
-        onaySor();
-
     }
 
     public static void onaySor() {
@@ -78,11 +58,29 @@ public class KelimeOyunu {
         }
     }
 
+    private static void kelimeEkle() {
+        System.out.println("Eski kelimeye eklenecek str giriniz");
+        ekleme = input.next();
+        System.out.println("Yeni str'i basa mi sona mi ekliyelim ?\n 1: basa ekle 0: sona ekle");
+
+        int tercih = input.nextInt();
+        if (tercih == 1) {
+            kelime = ekleme + kelime;
+        } else kelime = kelime + ekleme;
+        oyuncuDegistir();
+        onaySor();
+
+    }
 
     private static void oyunuBitir() {
-
         System.out.println("Oyunu " + oyuncu + " .oyuncu kazandi ");
     }
 
+    public static void oyuncuDegistir() {
+        if (oyuncu == 1) {//havva
+            oyuncu = 2;//goksel bey
+        } else
+            oyuncu = 1;
+    }
 
 }

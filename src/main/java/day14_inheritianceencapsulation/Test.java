@@ -7,17 +7,19 @@ public class Test {
     private double yukseklik;
     private double ekranBuyuklugu;
     private int maxSes = 30;
-    private int ses = 12;//artirip azalttigimiz gostermek icin bir deger atadik.
+    private int ses = 12;
     private boolean guc;
+
     public Test(double genislik, double yukseklik, double ekranBuyuklugu) {//constructor olusturdum
-        this.genislik = genislik;//burdaki genisligi genislik olarak kabul et
+        this.genislik = genislik;
         this.yukseklik = yukseklik;
         this.ekranBuyuklugu = ekranBuyuklugu;
     }
+
     public double kanalDegistirme(int kanal) {
         switch (kanal) {
             case 1:
-                return 34.75;//sout demedik cunku methodumuz void degil,birsey dondurmeli
+                return 34.75;
             case 2:
                 return 45.23;
             case 3:
@@ -27,8 +29,7 @@ public class Test {
     }
 
     public void gucDugmesi() {//kapaliysa acar aciksa kapatir TV'yi
-
-        this.guc = !guc; //Kapaliysa acar,Aciksa kapatir,
+        this.guc = !guc;
     }
 
     public int sesAzaltma() {
@@ -38,11 +39,10 @@ public class Test {
         return ses;
     }
 
-    public int sesArtirma(){//maxSesden kucukse artirir
-        if(maxSes>ses){
+    public int sesArtirma() {//maxSesden kucukse artirir
+        if (maxSes > ses) {
             ses++;
-        }return  ses;
+        }
+        return ses;
     }
-
-
 }

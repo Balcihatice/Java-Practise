@@ -1,6 +1,13 @@
 package day16_collectionsmap;
 
-public class BagetEkmek extends Tse{
+public class BagetEkmek extends Tse {
+
+
+    public static void main(String[] args) {
+        BagetEkmek baget = new BagetEkmek();
+
+
+    }
 
     @Override
     void gramaj500() {
@@ -9,12 +16,6 @@ public class BagetEkmek extends Tse{
 
     @Override
     void hijyenikOlmali() {
-
-    }
-
-    public static void main(String[] args) {
-        BagetEkmek baget = new BagetEkmek();
-
 
     }
 }

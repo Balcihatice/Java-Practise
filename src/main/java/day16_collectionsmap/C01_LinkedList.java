@@ -14,8 +14,8 @@ public class C01_LinkedList {
  */
 
     public static void main(String[] args) {
-
-        LinkedList<String> ll1  = new LinkedList<>(Arrays.asList("AYSE" ,"EMEL" ,"HARUN", "IREM" ));
+//Linklist`ler ekleme ve cikarmada cok kolaylik saglar
+        LinkedList<String> list = new LinkedList<>(Arrays.asList("AYSE", "EMEL", "HARUN", "IREM"));
 
         Scanner input = new Scanner(System.in);
 
@@ -23,10 +23,10 @@ public class C01_LinkedList {
 
         String isim = input.nextLine().toUpperCase();
 
-        if (ll1.remove(isim)){
+        if (list.remove(isim)) {
             System.out.println("Bu isim LinkedList'de vardi ve silindi.");
-            System.out.println("Silinmis hali ile liste"+ ll1);
-        }else{
+            System.out.println("Silinmis hali ile liste" + list);
+        } else {
             System.out.println("Bu isim LinkedList'de yok bu yuzden silinemedi");
         }
 
